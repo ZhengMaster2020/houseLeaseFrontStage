@@ -1,0 +1,11 @@
+<svg id="ic_remove" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48" height="48" viewBox="0 0 48 48">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #e5e5e5;
+      }
+    </style>
+  </defs>
+  <circle id="椭圆_1" data-name="椭圆 1" class="cls-1" cx="24" cy="24" r="23"/>
+  <image id="形状_1_拷贝" data-name="形状 1 拷贝" x="12" y="12" width="24" height="26" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAaCAQAAAAHtlR4AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjAwYSJh2BtX5jAAACi0lEQVQ4y32Uy0uUURjGf99834yjpc6tzLEboqBJFESYEbUUoit0U0qCFlIbW0SboPwDauui2gRFBFFBBFEpVHSFxMosKqRIy8uk5mV0rk+L+WacmS7PWb3nPC/nvL/38BrCViEGs2TCf8kCvPhxUkCIgX+4glj8IJZKcFDFFpYB3XQxTDTPbFDBLpbwhm6+ErOwqGQb9URZSRGdfIKchy2ikWZW85ZL3GAUuXVSI5Kkn3qtM6oUWcunNnUrLCmqDtUKiwRDvMfEgw8fFiPctmtxUMFWDrMWADFJFMz2JCHCFONlAVCIg18MMgf42UEbNZgAfOQCr5DZDtMMMUyASkxcBKjCxQxOttPKGtv+jHM8ZjqFVXznDj7KqGMhAQIUU84421kHwCwfOM8VG4JdnKkanVKPUhrVRw1p1o761KSSNIZ5Hk5Vq0kX1aeIkprXEzWrdJ4byl1bdF1TGXNcYzqe63Dk9VU4MTJRmHu8yDXkJgTYzCpcWacuyvHnf76UTII0socqQMSJUISb9UTx8pCvqa9HVg0eHVWvwpKkqIbVr0lJMf1Un06rOu1L37CYfbRQZ0f36aSUjWzCjQ8fexljgtH0DQ5V6Ih6bTJh9Wm/0AodU5dCSkqK6a4OKCgrhdWjVvVqzk54pSb5hSwt0U7dsh85ri6dUK0M5NRBPc+Qf6rDcmXqcqtFTzNnL3VITosSdlOPMIjQTweXsxjGecQyvCzHjSgjiGkRwANEcPOOszzI6UucQa7yjR1swOIz30hYROlhKROEuMk1knmdj9HPAFN8IskA74gbKqSBBoro5BGJv44ZB0EKCONihpAhg1ICLOQLE/8ZRiKBiUHcUGrDTSTT/D9lzE+S3+bnm4o27rAwAAAAAElFTkSuQmCC"/>
+</svg>

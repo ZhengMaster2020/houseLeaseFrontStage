@@ -1,0 +1,19 @@
+<svg id="through" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: none;
+        stroke: gray;
+        stroke-width: 3px;
+      }
+
+      .cls-2 {
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <circle id="椭圆_1" data-name="椭圆 1" class="cls-1" cx="24" cy="24" r="23"/>
+  <path id="形状_1662" data-name="形状 1662" class="cls-2" d="M34.733,17.867l-12.267,13.8-7-7"/>
+</svg>

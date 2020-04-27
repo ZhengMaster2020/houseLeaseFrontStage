@@ -1,0 +1,17 @@
+<svg id="ic_warning.svg" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ff4141;
+      }
+
+      .cls-2 {
+        font-size: 28px;
+        fill: #fff;
+        font-family: "Microsoft YaHei";
+      }
+    </style>
+  </defs>
+  <circle id="椭圆_1" data-name="椭圆 1" class="cls-1" cx="24" cy="24" r="23"/>
+  <text id="_" data-name="!" class="cls-2" transform="translate(19.036 37.111) scale(1.278)">!</text>
+</svg>

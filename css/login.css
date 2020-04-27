@@ -1,0 +1,484 @@
+ul{
+	/*background-color: blue;*/
+	list-style-type: none; 
+	display: inline-block;
+}
+
+*{
+	padding: 0;
+	margin: 0;
+}
+
+.top{
+	background-color: white;
+	height: 5%;
+	width: 100%;
+}
+
+.top_left{
+	/*background-color: grey;*/
+	display: inline-block;
+	margin: 1% auto auto 2%; /*顺序：上右下左*/
+	height: 90%;
+	width: 152px;
+}
+
+/*顶部搜索框*/
+.iconfont {
+    color: #000;
+    text-align: center;
+    font-style: normal;
+    display: inline-block;
+    vertical-align: middle;
+    font-family: 'iconfont';
+}
+
+.qa-search-wrap-left {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 18%;
+    margin-top: 27px;
+}
+
+.comp-Searcher {
+    position: relative;
+    width: 494px;
+    height: 35px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.comp-Searcher .ipt-wrap {
+    position: relative;
+    background: #f8f8f8;
+}
+
+.ipt {
+    /*border-radius: 5% 0 0 5%;*/
+    padding: 2px 10px 2px;
+    width: 430px;
+    height: 35px;
+    font-size: 14px;
+    line-height: 28px;
+    border: 0;
+    color: #333;
+    background: #fff;
+    background: transparent;
+    background: rgba(0, 0, 0, 0);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) inset;
+}
+
+select, input {
+    vertical-align: middle;
+}
+
+input, select, input, textarea {
+    font-size: 12px;
+    outline: none;
+}
+
+.comp-Searcher .right-icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: inline-block;
+    vertical-align: top;
+    background-color: #4a8200;
+    text-align: center;
+    width: 64px;
+    height: 35px;
+    border: 0;
+    outline: 0;
+}
+
+.comp-Searcher .right-icon .iconfont {
+    position: relative;
+    top: 1px;
+    font-size: 16px;
+    color: #fff;
+}
+
+
+/*登录注册按钮*/
+.top_right{
+	display: inline-block;
+	margin-left: 9%;
+	width: 18%;
+	position: relative;	/* 子绝父相*/
+}
+
+.top_right li{
+	display: inline-block;
+	width: 100px;
+	height: 30px;
+	font-size: 20px;
+	text-align: center;
+    margin-right: 15px;
+}
+
+.top_right a{
+	text-decoration: none;
+	color: grey;
+}
+
+.ul_son{
+	position: absolute;
+	left: 10px;
+	right: 10px;
+	margin-top: -11px;
+}
+
+.cover{
+    width:100%;
+    height:100%;
+    text-align:center;
+    color:white;4}
+ 
+.cover::before{  	/*-------背景模糊cover操作*/
+    content:'111';
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:transparent url('../pic/backgroud.jpg') center center no-repeat;
+    filter:blur(5px);
+    z-index:-1;
+    background-size:cover;
+}
+
+.cover{
+	top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    margin-bottom: 10%;
+}
+
+.cover_backgroud{
+	width: 500px;
+	height: 500px;
+	border: 1px solid white;
+	background-color: white;
+	opacity: 0.7;
+	display: inline-block;
+	margin: 3% auto 0 auto;	
+}
+
+.cover_content{
+	margin: 15% auto 0 auto;
+	/*background-color: orange;*/
+	width: 70%;
+	height: 70%;
+}
+
+.cover_content span{
+	font-size: 30px;
+	color: grey;
+	font-weight: 800;
+	font-style: none;
+}
+.cover_content input{
+	border-radius: 5px;
+	border: 1px solid grey;
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	font-size: 18px;
+	color: grey;
+}
+
+.cover_content li{
+	margin: 0 auto 10% auto;
+	font-family: 'MicroSoft YaHei';
+}
+
+/*不同浏览器中输入框的placeholder的自适应*/
+#username::-webkit-input-placeholder{ /* 使用webkit内核的浏览器 */
+	color: grey;
+	font-size: 20px;
+}
+
+#username::-moz-placeholder{  /* Firefox版本19+ */
+	color: grey;
+	font-size: 20px;
+} 
+
+#username::-ms-input-placeholder{   /* IE浏览器 */
+	color: grey;
+	font-size: 20px;
+}
+
+#password::-webkit-input-placeholder{ /* 使用webkit内核的浏览器 */
+	color: grey;
+	font-size: 20px;
+}
+
+#password::-moz-placeholder{  /* Firefox版本19+ */
+	color: grey;
+	font-size: 20px;
+} 
+
+#password::-ms-input-placeholder{   /* IE浏览器 */
+	color: grey;
+	font-size: 20px;
+}
+
+.cover_content_btn{
+	/*outline: none; */
+	border-style: none;
+	width: 100px;
+	height: 35px;
+	line-height: 35px;
+	font-size: 16px;
+	background-color: grey;
+	opacity: 0.7;
+	font-weight: 800;
+}
+
+/*页尾*/
+.footer-area {
+    border-top: 1px solid #D1D1D1;
+    background: #555 url(../pic/bg-footer.jpg) repeat scroll 0% 0%;
+    color: #535353;
+    font-size: 14px;
+    line-height: 28px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+}
+
+
+.footer {
+    padding: 0px 0px 60px;
+    background: rgba(255, 255, 255, 0.89) none repeat scroll 0% 0%;
+}
+
+.single-footer {
+    margin-top: 35px;
+}
+
+.footer h4 {
+    color: #717171;
+    font-weight: 400;
+    margin-top: 0px;
+    font-size: 20px;
+    text-transform: uppercase;
+    border-bottom: 2px solid #878787;
+    line-height: 35px;
+    margin-bottom: 0px;
+    letter-spacing: 2px;
+}
+
+.footer-title-line {
+    width: 100px;
+    height: 2px;
+    background: #FFA600;
+    margin: 0px 0px 33px;
+    position: relative;
+    top: -2px;
+}
+
+.footer img {
+    height: 32px;
+}
+
+.footer img {
+    margin-bottom: 20px;
+}
+
+.footer p {
+    line-height: 25px;
+    font-size: 13px;
+    padding-bottom: 20px;
+}
+
+.footer ol, .footer ul {
+    list-style: outside none none;
+}
+
+.footer ul {
+    padding: 0px;
+    margin: 0px;
+}
+
+ul.footer-adress li {
+    margin-bottom: -4px;
+}
+
+.footer ul li {
+    margin-bottom: 5px;
+}
+
+.footer ul li i {
+    padding-right: 10px;
+    color: #000;
+}
+
+.strong {
+    font-weight: 500;
+}
+
+/*页尾-第二列框*/
+.footer ul li {
+    margin-bottom: 5px;
+}
+
+.footer-menu{
+    width: 265px;
+}
+
+.footer-menu a:hover{
+     color: #d27e04;
+}
+
+
+.footer-menu li {
+    border-bottom: 1px solid rgba(255, 171, 0, 0.31);
+}
+
+.footer ul li a {
+    color: #535353;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 13px;
+    outline: 0;
+    text-decoration: none;
+}
+
+ul.footer-blog li {
+    width: 100%;
+    display: table;
+    margin-bottom: -20px;
+}
+
+.p0 {
+    padding: 0px;
+}
+
+/*页尾--第三列*/
+.footer-blog{
+    width: 265px;
+}
+.footer-blog .blg-date {
+    color: #FFF;
+    background-color: #AD7206;
+    padding: 2px 0 2px 0;
+    font-size: 11px;
+    position: relative;
+    top: -22px;
+    width: 100%;
+}
+
+.footer-blog img {
+    width: 100%;
+    height: 60px;
+    margin-bottom: 0px;
+}
+
+.footer-blog .blg-entry h6 {
+    padding: 2px 0px;
+    margin: 0px;
+}
+
+h6, .h6 {
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.footer-blog .blg-entry h6 a {
+    font-size: 13px;
+    text-transform: capitalize;
+    font-weight: 600;
+    color: #FFA600;
+}
+
+.footer-blog p {
+    line-height: 17px;
+    padding: 8px 2px;
+}
+
+/*页尾-第四列*/
+.single-footer {
+    margin-top: 35px;
+}
+
+.input-group {
+    position: relative;
+    display: table;
+    border-collapse: separate;
+}
+
+.social ul {
+    padding: 0px;
+    list-style: outside none none;
+}
+
+.social li {
+    display: inline-block;
+    padding-right: 0.3em;
+    padding-bottom: 0.3em;
+}
+
+.social ul li a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    border: 1px solid rgb(146, 146, 146);
+    transition: all 0.8s ease 0s;
+    color: rgb(146, 146, 146);
+}
+
+.social ul li a i {
+    color: rgb(146, 146, 146);
+    font-size: 20px;
+    padding: 10px;
+}
+
+.news-letter .form-control {
+    display: block;
+    width: 100%;
+    height: 44px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857;
+    color: #E1E1E1;
+    background-color: rgba(255, 255, 255, 0.52);
+    background-image: none;
+    border: 1px solid rgba(231, 157, 45, 0.3);
+    border-radius: 0px;
+    box-shadow: 0px 1px 1px rgba(179, 179, 179, 0.1) inset;
+}
+
+.footer .subscribe {
+    display: inline-block;
+    padding: 5px 10px;
+    margin-bottom: 22px;
+    font-size: 14px;
+    margin-left: -17px;
+    z-index: 99;
+    background-color: #FFA600;
+    border-color: #FFA600;
+}
+
+.input-group-btn .btn {
+    background-color: #FFC500;
+    border-color: #FFC500;
+    border-radius: 0px;
+    height: 44px;
+    color: #FFF;
+}
+
+.input-group-btn>.btn {
+    position: relative;
+}
+
+.pe-2x {
+    font-size: 2em;
+}
+
+[class^="pe-7s-"], [class*=" pe-7s-"] {
+    display: inline-block;
+}

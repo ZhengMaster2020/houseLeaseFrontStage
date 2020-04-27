@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>小麦网个人信息页</title>
+	<link rel="stylesheet" type="text/css" href="css/personal-infor.css">
+	<!-- boorstrap必需CSS -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/bootsnav.css">
+	<link type="text/css" href="css/pe-icon-7-stroke.css" rel="stylesheet">
+	<!-- js -->
+	<script src="https://static.pengyaou.com/js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript"  src="js/tab-left.js"></script>
+</head>
+<body>
+	<div class="all-bgc">
+	<div class="top">  <!-- 图标  字体  小控件 -->
+		<!-- <div class="top_icon"></div> -->
+		<div class="top_left">
+		<a href="index.html">
+			<img alt="" src="pic/logo.png">
+		</a>
+		</div>
+		
+		<div class="qa-search-wrap-left">
+		<!-- 顶部搜索框 -->
+            <form class="comp-Searcher" id="qaNavSearcherForm" type="post" action="#">
+    		<div class="ipt-wrap">
+        		<input class="ipt" id="qaNavSearcherIpt" type="text" placeholder="在这儿输入您的问题">
+    		</div>
+    		<button class="right-icon" type="submit">
+    			<i class="iconfont">搜&nbsp;&nbsp;索</i>
+    		</button>
+			</form>
+        </div>
+
+		<div class="top_right">
+			<!-- 登录注册按钮 -->
+			<ul class="ul_son">
+				<li><a href="index.html">首&nbsp;&nbsp;&nbsp;&nbsp;页</a></li>
+				<li class="exit" onclick="reLogin()"><a id="exit" href="#">退&nbsp;&nbsp;&nbsp;&nbsp;出</a></li>
+			</ul>
+		</div>
+		<hr />	<!-- 分割线 -->
+	</div>
+
+<div class="headerSub-mod">
+	<!-- 分隔框banner -->
+  <div class="headerSub clearfix">
+    <img id="img" src="pic/banner-icon.jpg" class="user-photo img" alt="用户头像">
+    <div class="user-info">
+      <div class="info-sup clearfix">
+        <span class="hello">
+            <span class="now-time">下午</span>好，<span id="nickname" class="nickname name" >sheep</span>
+        </span>
+      </div>
+      <div class="info-sub clearfix">
+        <ul>
+          <li class="user-account">
+            账户名：<span class="nickname">tK1BAwp</span>
+          </li>
+          <i class="split-icon"></i>
+          <li class="user-type">
+              <span>租客用户</span>
+              <!-- <span>房东用户</span> -->
+              <!-- <span>管理员用户</span> -->
+          </li>
+          <i class="split-icon"></i>
+          <li class="last-time">
+            上次登录：<span id="loginTimer" class="day">2020-02-25 12:26:35</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <a class="info-modify" href="http://localhost:8080/#/login"><button>修改资料&gt;</button></a>
+  </div>
+</div>
+
+	<div class="tab-bgc">
+		<!-- 侧选项卡 -->
+		<div id="TabMain">
+		    <div class="tabItemContainer">
+		        <li><a class="tabItemCurrent">个人资料</a></li>
+		        <li><a>房源管理</a></li>
+		        <li><a>问答</a></li>
+		    </div>
+		    <div class="tabBodyContainer">
+		        <div class="tabBodyItem tabBodyCurrent ">
+		           <!-- tab-1 -->
+					<div class="right-cont">
+						<ul class="tab-list clearfix"> <!-- 个人资料标题 -->
+							<li><a href="#" class="cur">个人资料</a></li>
+						</ul>
+						<!-- 个人资料信息 -->
+						<div class="profile"> 
+							<div class="profile-title">
+								<span>基本账号资料</span>
+							</div>
+							<ul class="profile-list">
+								<li class="photo">
+									<span class="key">头像</span>
+									<img class="img" src="pic/banner-icon.jpg" alt="你的头像">
+								</li>
+								<!-- <li class="account">
+									<span class="key">帐号</span>
+									<span class="value">tK1BAwp</span>
+								</li> -->
+								<li class="name">
+									<span class="key">昵称</span>
+									<span class="value nickname">sheep</span>
+								</li>
+								<li class="email">
+									<span class="key">邮箱</span>
+									<span class="value emailV">暂无提供</span>
+									<a class="operate-btn" href="#">绑定</a>
+								</li>
+								<li class="phone">
+									<span class="key">手机</span>
+									<span class="value phoneV">13415625417</span>
+								</li>
+								<li class="password">
+									<span class="key">密码</span>
+									<span class="value passwordV">暂无提供</span>
+								</li>
+							</ul>
+					</div>
+					</div>
+		        </div>
+		        <div class="tabBodyItem">
+		           <!-- tab-3 房源管理-->
+		           <div class="tab-contents">
+		           	<!-- line---1 -->
+		            <div class="zu-itemmod">
+	                    <a data-company="" class="img" _soj="Filter_1&amp;hfilter=filterlist" data-sign="true" href="" target="_blank" hidefocus="true">
+	                        <img class="thumbnail" src="pic/house-img.jpg" width="180" height="135" data-loaded="true">
+	                    </a>
+	                    <div class="zu-info">
+	                        <h3>
+	                            <a target="_blank" _soj="Filter_1&amp;hfilter=filterlist" href="detail.html"><b class="strongbox">急速维修 出行便利 东圃 东圃小学教师宿舍 南北通透</b>
+	                            </a>
+	                        </h3>
+	                        <p class="details-item tag">
+	                            <b class="strongbox" style="font-weight: normal;">1</b>室<b class="strongbox" style="font-weight: normal;">1</b>厅<span>|</span><b class="strongbox" style="font-weight: normal;">38</b>平米<span>|</span>高层(共19层)<i class="iconfont jjr-icon"></i>汤朗朗  
+	                        </p>
+	                        <address class="details-item">
+	                            <a target="_blank" href="detail.html">东圃小学教师宿舍</a>&nbsp;&nbsp;
+	                            天河-东圃 车陂北正大街28号</address>
+	                        <p class="details-item bot-tag">
+	                            <span class="cls-1">整租</span>
+	                            <span class="cls-2">朝南</span>
+	                            <span class="cls-3">有电梯</span>
+	                            <span class="cls-4">4/5号线</span>
+	                		</p>
+	                    </div>
+	                    <i class="jx-sign">广告</i>
+	                    <div class="zu-side">
+	                        <p><strong><b class="strongbox">1970</b></strong> 元/月</p>
+	                    </div>
+                	</div>
+                  </div>
+
+                   <div class="tab-contents">
+		           	<!-- line---2 -->
+		            <div class="zu-itemmod">
+	                    <a data-company="" class="img" _soj="Filter_1&amp;hfilter=filterlist" data-sign="true" href="detail.html" target="_blank" hidefocus="true">
+	                        <img class="thumbnail" src="pic/house-img.jpg" width="180" height="135" data-loaded="true">
+	                    </a>
+	                    <div class="zu-info">
+	                        <h3>
+	                            <a target="_blank" _soj="Filter_1&amp;hfilter=filterlist" href="detail.html"><b class="strongbox">急速维修 出行便利 东圃 东圃小学教师宿舍 南北通透</b>
+	                            </a>
+	                        </h3>
+	                        <p class="details-item tag">
+	                            <b class="strongbox" style="font-weight: normal;">1</b>室<b class="strongbox" style="font-weight: normal;">1</b>厅<span>|</span><b class="strongbox" style="font-weight: normal;">38</b>平米<span>|</span>高层(共19层)<i class="iconfont jjr-icon"></i>汤朗朗  
+	                        </p>
+	                        <address class="details-item">
+	                            <a target="_blank" href="detail.html">东圃小学教师宿舍</a>&nbsp;&nbsp;
+	                            天河-东圃 车陂北正大街28号</address>
+	                        <p class="details-item bot-tag">
+	                            <span class="cls-1">整租</span>
+	                            <span class="cls-2">朝南</span>
+	                            <span class="cls-3">有电梯</span>
+	                            <span class="cls-4">4/5号线</span>
+	                		</p>
+	                    </div>
+	                    <i class="jx-sign">广告</i>
+	                    <div class="zu-side">
+	                        <p><strong><b class="strongbox">1970</b></strong> 元/月</p>
+	                    </div>
+                	</div>
+                  </div>
+
+					<!-- 分页按钮 -->
+                  <div class="page-content1">
+                  	<div class="multi-page">
+                  		<i class="iPre">上一页</i>
+                  		<i class="curr">1</i>
+                  		<a href="#">2</a>
+                  		<a href="#">3</a>
+                  		<a href="#">4</a> 
+                  		<i class="aDotted">...</i> 
+                  		<a href="#" class="aNxt">下一页 &gt;</a>
+                  	</div>
+                  </div>
+		        </div>
+
+		        <div class="tabBodyItem">
+		           <!-- tab-5  问答-->
+		            <div class="right-cont">
+					    <ul class="answer-items">
+					        <li class="item-area  item-first" data-check="1" data-pass="1">
+					        	<!-- line1--问答 -->
+					            <div class="item-real-area">
+					                <div class="item-content-info">
+					                    <!-- 是经纪人且是小区问题才展示该标签 -->
+					                    <a href="javascript:void(0);"><span class="item-content" style="color: rgb(51, 51, 51);">【东闸口大街南二巷6号小区】附近交通怎么样呢</span></a>
+					                    <!-- 只有我的回答页才有下方 class="answerer-name" 的元素 -->
+					                     <p class="item-info">
+					                     <span class="ask-date">2020-02-25</span>
+					                     <span class="item-msg-count">
+					                     	<span class="">评论数</span>
+					                     	<span class="msg-count-text">0</span></span>
+					                    </p>
+					                </div>
+					            </div>
+					        </li>
+					        <li class="item-area  item-first" data-check="1" data-pass="1">
+					        	<!-- line2--问答 -->
+					            <div class="item-real-area">
+					                <div class="item-content-info">
+					                    <!-- 是经纪人且是小区问题才展示该标签 -->
+					                    <a href="javascript:void(0);"><span class="item-content" style="color: rgb(51, 51, 51);">【东闸口大街南二巷6号小区】附近交通怎么样呢</span></a>
+					                    <!-- 只有我的回答页才有下方 class="answerer-name" 的元素 -->
+					                     <p class="item-info">
+					                     <span class="ask-date">2020-02-25</span>
+					                     <span class="item-msg-count">
+					                     	<span class="">评论数</span>
+					                     	<span class="msg-count-text">0</span></span>
+					                    </p>
+					                </div>
+					            </div>
+					        </li>
+					        <li class="item-area  item-first" data-check="1" data-pass="1">
+					        	<!-- line3--问答 -->
+					            <div class="item-real-area">
+					                <div class="item-content-info">
+					                    <!-- 是经纪人且是小区问题才展示该标签 -->
+					                    <a href="javascript:void(0);"><span class="item-content" style="color: rgb(51, 51, 51);">【东闸口大街南二巷6号小区】附近交通怎么样呢</span></a>
+					                    <!-- 只有我的回答页才有下方 class="answerer-name" 的元素 -->
+					                     <p class="item-info">
+					                     <span class="ask-date">2020-02-25</span>
+					                     <span class="item-msg-count">
+					                     	<span class="">评论数</span>
+					                     	<span class="msg-count-text">0</span></span>
+					                    </p>
+					                </div>
+					            </div>
+					        </li>
+							<li class="item-area  item-first" data-check="1" data-pass="1">
+								<!-- line4--问答 -->
+					            <div class="item-real-area">
+					                <div class="item-content-info">
+					                    <!-- 是经纪人且是小区问题才展示该标签 -->
+					                    <a href="javascript:void(0);"><span class="item-content" style="color: rgb(51, 51, 51);">【东闸口大街南二巷6号小区】附近交通怎么样呢</span></a>
+					                    <!-- 只有我的回答页才有下方 class="answerer-name" 的元素 -->
+					                     <p class="item-info">
+					                     <span class="ask-date">2020-02-25</span>
+					                     <span class="item-msg-count">
+					                     	<span class="">评论数</span>
+					                     	<span class="msg-count-text">0</span></span>
+					                    </p>
+					                </div>
+					            </div>
+					        </li>
+					        <li class="item-area  item-first" data-check="1" data-pass="1">
+								<!-- line4--问答 -->
+					            <div class="item-real-area">
+					                <div class="item-content-info">
+					                    <!-- 是经纪人且是小区问题才展示该标签 -->
+					                    <a href="javascript:void(0);"><span class="item-content" style="color: rgb(51, 51, 51);">【东闸口大街南二巷6号小区】附近交通怎么样呢</span></a>
+					                    <!-- 只有我的回答页才有下方 class="answerer-name" 的元素 -->
+					                     <p class="item-info">
+					                     <span class="ask-date">2020-02-25</span>
+					                     <span class="item-msg-count">
+					                     	<span class="">评论数</span>
+					                     	<span class="msg-count-text">0</span></span>
+					                    </p>
+					                </div>
+					            </div>
+					        </li>
+					    </ul>
+					    <div class="page-content">    
+					    	<div class="multi-page">
+					            <i class="iPre">上一页</i>
+					            <i class="curr">1</i>
+					        	<i class="iNxt">下一页</i>
+					        </div>
+					    </div>
+                	</div>
+		        </div>
+		    </div>
+		</div>
+	</div>
+
+	</div>
+
+	<!-- 页尾 -->
+<div class="footer-area">
+    <div class=" footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6 wow fadeInRight animated animated" style="visibility: visible; animation-name: fadeInRight;">
+                    <div class="single-footer">
+                        <h4>关于我们 </h4>
+                        <div class="footer-title-line"></div>
+                        <img src="pic/logo.png" alt="" class="wow pulse animated" data-wow-delay="1s" style="visibility: visible; animation-delay: 1s; animation-name: pulse;">
+                        <p>良心企业 良心企业 良心企业 良心企业 良心企业 良心企业 良心企业 良心企业 </p>
+                        <ul class="footer-adress">
+                            <li><i class="pe-7s-map-marker strong"> </i>广东省广州市xxx区</li>
+                            <li><i class="pe-7s-mail strong"> </i> email@yourcompany.com</li>
+                            <li><i class="pe-7s-call strong"> </i> +1 888 967 8888</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 wow fadeInRight animated animated" style="visibility: visible; animation-name: fadeInRight;">
+                    <div class="single-footer">
+                        <h4>快速导航 </h4>
+                        <div class="footer-title-line"></div>
+                        <ul class="footer-menu">
+                            <li><a href="#">新房发布</a>  </li> 
+                            <li><a href="area.html">地区选择--天河区</a>  </li> 
+                            <li><a href="#">联系我们 </a></li> 
+                            <li><a href="#">房屋搜索</a></li> 
+                            <li><a href="#">个人中心</a>  </li> 
+                            <li><a href="#">我的收藏 </a>  </li> 
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 wow fadeInRight animated animated" style="visibility: visible; animation-name: fadeInRight;">
+                    <div class="single-footer">
+                        <h4>最新发布</h4>
+                        <div class="footer-title-line"></div>
+                        <ul class="footer-blog">
+                            <li>
+                                <div class="col-md-4 col-sm-4 col-xs-4 blg-thumb p0">
+                                    <a href="detail.html">
+                                        <img src="pic/small-pic.jpg">
+                                    </a>
+                                    <span class="blg-date">12-12-2019</span>
+
+                                </div>
+                                <div class="col-md-8  col-sm-8 col-xs-8  blg-entry">
+                                    <h6> <a href="detail.html">番禺区笋盘 </a></h6> 
+                                    <p style="line-height: 17px; padding: 8px 2px;">棒棒哒的房子 棒棒哒</p>
+                                </div>
+                            </li> 
+
+                            <li>
+                                <div class="col-md-4 col-sm-4 col-xs-4 blg-thumb p0">
+                                    <a href="detail.html">
+                                        <img src="pic/small-pic.jpg">
+                                    </a>
+                                    <span class="blg-date">12-12-2019</span>
+
+                                </div>
+                                <div class="col-md-8  col-sm-8 col-xs-8  blg-entry">
+                                    <h6> <a href="detail.html">番禺区笋盘 </a></h6> 
+                                    <p style="line-height: 17px; padding: 8px 2px;">棒棒哒的房子 棒棒哒</p>
+                                </div>
+                            </li> 
+
+                            <li>
+                                <div class="col-md-4 col-sm-4 col-xs-4 blg-thumb p0">
+                                    <a href="detail.html">
+                                        <img src="pic/small-pic.jpg">
+                                    </a>
+                                    <span class="blg-date">12-12-2019</span>
+
+                                </div>
+                                <div class="col-md-8  col-sm-8 col-xs-8  blg-entry">
+                                    <h6> <a href="detail.html">番禺区笋盘 </a></h6> 
+                                    <p style="line-height: 17px; padding: 8px 2px;">棒棒哒的房子 棒棒哒</p>
+                                </div>
+                            </li> 
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 wow fadeInRight animated animated" style="visibility: visible; animation-name: fadeInRight;">
+                    <div class="single-footer news-letter">
+                        <h4>反馈＆分享</h4>
+                        <div class="footer-title-line"></div>
+                        <p>亲们，可以在此留下你们的意见＆建议~</p>
+
+                        <form>
+                            <div class="input-group">
+                                <input class="form-control form-width" type="text" placeholder="E-mail ... ">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-primary subscribe" type="button">
+                                        <i class="pe-7s-paper-plane pe-2x"></i>
+                                    </button>
+                                </span>
+                            </div>
+                            <!-- /input-group -->
+                        </form> 
+
+                        <div class="social pull-right"> 
+                            <ul>
+                                <li>
+                                    <a class="wow fadeInUp animated animated" href="https://twitter.com/kimarotec" style="visibility: visible; animation-name: fadeInUp;">
+                                        <i class="fa fa-twitter"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="wow fadeInUp animated animated" href="https://www.facebook.com/kimarotec" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+                                        <i class="fa fa-facebook"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="wow fadeInUp animated animated" href="https://plus.google.com/kimarotec" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
+                                        <i class="fa fa-google-plus"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="wow fadeInUp animated animated" href="https://instagram.com/kimarotec" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
+                                        <i class="fa fa-instagram"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="wow fadeInUp animated animated" href="https://instagram.com/kimarotec" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp;">
+                                        <i class="fa fa-dribbble"></i>
+                                    </a>
+                                </li>
+                            </ul> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>	
+
+<script src="./js/business/login.js"></script>
+<script src="./js/business/sha1.js"></script>
+<script>
+	$(document).ready(() => {
+		const userInfo = JSON.parse(sessionStorage.getItem('user'))
+		console.log(userInfo, 'userInfo')
+		$('.nickname').text(`${userInfo.username}`)
+		$('#loginTimer').text(`${userInfo.loginTime}`)
+		$('.img').attr('src', userInfo.avatarUrl ? userInfo.avatarUrl : userInfo.avatar)
+		$('.emailV').text(userInfo.email)
+		$('.phoneV').text(userInfo.phone)
+		$('.passwordV').text(hex_sha1(userInfo.password).replace(/./g, '*')) // 密码sha1算法加密星号号显示
+	})
+	// 点击退出 重新登录
+	function reLogin() { 
+		console.log('relogin')
+		sessionStorage.removeItem('user')
+		sessionStorage.removeItem('token')
+		$('#exit').attr('href', 'login.html')
+	}
+</script>
+</body>
+</html>

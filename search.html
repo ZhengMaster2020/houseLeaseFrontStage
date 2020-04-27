@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>小麦网搜索页面</title>
+	<link type="text/css" href="css/search.css" rel="stylesheet">  
+	<!-- 搜索页菜单栏选项卡样式 -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/bootsnav.css">
+	<!-- font-awesome.css为菜单栏选项卡倒三角下标，需引用官网的样式 -->
+	<link href="http://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+	<!-- 搜索页菜单栏选项卡JS -->
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+</head>
+<body>
+	<div class="top">  <!-- 图标  字体  小控件 -->
+	<!-- 头部 -->
+
+		<div class="top_left">
+		<a href="index.html">
+			<img alt="logo" src="pic/logo.png">
+		</a>
+		</div>
+        
+        <div class="qa-search-wrap-left">
+        <!-- 顶部搜索框 -->
+            <form class="comp-Searcher" id="qaNavSearcherForm" type="post" action="#">
+            <div class="ipt-wrap">
+                <input class="ipt" id="qaNavSearcherIpt" type="text" placeholder="在这儿输入您的问题">
+            </div>
+            <button onclick="searchHouse()" class="right-icon" type="">
+                <i class="iconfont">搜&nbsp;&nbsp;索</i>
+            </button>
+            </form>
+        </div>
+
+
+		<div class="top_right">
+			<ul class="ul_son">
+				<li><a href="login.html">登&nbsp;&nbsp;&nbsp;&nbsp;录</a></li>
+				<li><a href="register.html">注&nbsp;&nbsp;&nbsp;&nbsp;册</a></li>
+			</ul>
+		</div>
+		<hr />	<!-- 分割线 -->
+	</div>
+
+	<!-- 菜单导航栏，支持下拉 -->
+	<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <nav class="navbar navbar-default navbar-mobile bootsnav on">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="navbar-menu">
+                    <ul class="nav navbar-nav" data-in="fadeInDown" data-out="fadeOutUp">
+                    	<!-- Slide 1 -->
+                        <li><a href="index.html" data-hover="Home">首页</a></li>
+                    	<!-- Slide 2 -->
+                        <li><a href="index.html#newPublish" data-hover="About">新房发布</a></li>
+                        <!-- Slide 3 -->
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="Shortcodes">地区选择</a>
+                            <ul id="location" class="dropdown-menu animated">
+                                <!-- <li><a href="area.html">全部（不限）</a></li>
+                                <li><a href="area.html">增城</a></li>
+                                <li><a href="area.html">番禺</a></li>
+                                <li><a href="area.html">南沙</a></li>
+                                <li><a href="area.html">花都</a></li>
+                                <li><a href="area.html">白云</a></li>
+                                <li><a href="area.html">海珠</a></li>
+                                <li><a href="area.html">越秀</a></li>
+                                <li><a href="area.html">荔湾</a></li>
+                                <li><a href="area.html">天河</a></li>
+                                <li><a href="area.html">从化</a></li>
+                                <li><a href="area.html">黄埔</a></li>
+                                <li><a href="area.html">广州周边</a></li> -->
+                            </ul>
+                        </li>
+                        <!-- Slide 4 -->
+                        <!-- <li><a href="recommend.html" data-hover="Contact">爆款推荐</a></li> -->
+                        <!-- Slide 5 -->
+                        <li><a href="javascript::0" data-hover="Portfolio">房屋搜索</a></li>
+                        <!-- Slide 7 -->
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="Pages">更多</a>
+                            <ul class="dropdown-menu animated">
+                                <li><a href="personal-infor.html">个人中心</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>
+
+
+<div id="content" style="overflow-x: hidden;">
+<div class="sale-box col-xs-12">
+	<!-- 房屋列表们 -->
+	<div class="sale-left col-xs-8">
+		<div class="sortby clearfix sortby-top-v2" id="filtersort"> 
+			<span id="nosearch"></span>
+		<!-- 列表排序 -->
+		    <span>为您找到以下<strong>符合条件</strong>的房源信息
+		    	<span>    
+			    	<span class="sort-con">排序：
+			        <a class="fst cur" href="#" rel="nofollow">默认</a>
+			        <a class="down" href="#" rel="nofollow">面积</a>
+			        <a class="up" href="#" rel="nofollow">价格</a>
+			        <a class="down" href="#" rel="nofollow">最新</a>
+		        	</span>
+				</span>
+			</span>
+		</div>
+        
+        <ul id="houselist-mod-new" class="houselist-mod houselist-mod-new">
+        <!-- 房屋卡片列表 -->
+            <li class="list-item" data-from="">
+            <!-- card 1 -->
+                <div class="item-img">
+                    <img src="pic/fenlei01.jpg" width="180" height="135">
+                        <div class="icon-duotu">
+                            <span class="dt-bg"></span>
+                            <i class="iconfont"></i>
+                        </div>
+                </div>
+                <div class="house-details">
+                    <div class="house-title">
+                        <a data-from="" data-company="" title="侨鑫汇悦台 悦一江之水 汇一方之城 坐拥龍脉之地 创万世基业" href="detail.html" target="_blank" class="houseListTitle">侨鑫汇悦台 悦一江之水 汇一方之城 坐拥龍脉之地 创万世基业</a>
+                        <!-- 《《《《《《《《《 php show_black_tag《《《《《《《《《 -->
+                        <i class="house-icon house-icon-anxuan" style="font-weight: normal;">安选</i>
+                        <i class="house-icon house-icon-default border-line">真实在售</i>
+                        <!-- 《《《《《《《《《 php show_black_tag《《《《《《《《《 -->
+                    </div>
+                    <div class="details-item">
+                        <span>6室3厅</span>
+                        <em class="spe-lines">|</em>
+                        <span>2399m²</span>
+                        <em class="spe-lines">|</em>
+                        <span>高层(共42层)</span>
+                        <em class="spe-lines">|</em>
+                        <span>2018年建造</span>                                
+                    </div>
+                    <div class="details-item">
+                        <span class="comm-address" title="侨鑫汇悦台&nbsp;&nbsp;天河-珠江新城东-临江大道417-431号">侨鑫汇悦台&nbsp;&nbsp;天河-珠江新城东-临江大道417-431号</span>
+                    </div>
+                    <div class="tags-bottom">
+                        <span class="item-tags tag-metro">近地铁</span>
+                        <span class="item-tags tag-others">新房房源</span>
+                        <span class="item-tags tag-others">配套成熟</span>            
+                    </div>
+                    <div class="broker-item">
+                        <span class="broker-img-wrap">
+                            <img src="pic/fenlei-human.jpg" alt="">
+                        </span>
+                        <span class="broker-name broker-text">李丙强</span>
+                        <span class="broker-text"></span>
+                        <!-- 是否安选经纪人 显示icon -->
+                        <span>
+                            <img class="broker-ax-img" src="pic/fenlei-icon.png">
+                        </span>                                            
+                    </div>
+                </div>
+                <div class="pro-price">
+                    <span class="price-det"><strong>50999</strong>万</span><span class="unit-price">212584元/m²</span>        
+                </div>
+						</li>  
+						<li class="list-item" data-from="">
+            <!-- card 2 -->
+                <div class="item-img">
+                    <img src="pic/fenlei01.jpg" width="180" height="135">
+                        <div class="icon-duotu">
+                            <span class="dt-bg"></span>
+                            <i class="iconfont"></i>
+                        </div>
+                </div>
+                <div class="house-details">
+                    <div class="house-title">
+                        <a data-from="" data-company="" title="侨鑫汇悦台 悦一江之水 汇一方之城 坐拥龍脉之地 创万世基业" href="detail.html" target="_blank" class="houseListTitle">侨鑫汇悦台 悦一江之水 汇一方之城 坐拥龍脉之地 创万世基业</a>
+                        <!-- 《《《《《《《《《 php show_black_tag《《《《《《《《《 -->
+                        <i class="house-icon house-icon-anxuan" style="font-weight: normal;">安选</i>
+                        <i class="house-icon house-icon-default border-line">真实在售</i>
+                        <!-- 《《《《《《《《《 php show_black_tag《《《《《《《《《 -->
+                    </div>
+                    <div class="details-item">
+                        <span>6室3厅</span>
+                        <em class="spe-lines">|</em>
+                        <span>2399m²</span>
+                        <em class="spe-lines">|</em>
+                        <span>高层(共42层)</span>
+                        <em class="spe-lines">|</em>
+                        <span>2018年建造</span>                                
+                    </div>
+                    <div class="details-item">
+                        <span class="comm-address" title="侨鑫汇悦台&nbsp;&nbsp;天河-珠江新城东-临江大道417-431号">侨鑫汇悦台&nbsp;&nbsp;天河-珠江新城东-临江大道417-431号</span>
+                    </div>
+                    <div class="tags-bottom">
+                        <span class="item-tags tag-metro">近地铁</span>
+                        <span class="item-tags tag-others">新房房源</span>
+                        <span class="item-tags tag-others">配套成熟</span>            
+                    </div>
+                    <div class="broker-item">
+                        <span class="broker-img-wrap">
+                            <img src="pic/fenlei-human.jpg" alt="">
+                        </span>
+                        <span class="broker-name broker-text">李丙强</span>
+                        <span class="broker-text"></span>
+                        <!-- 是否安选经纪人 显示icon -->
+                        <span>
+                            <img class="broker-ax-img" src="pic/fenlei-icon.png">
+                        </span>                                            
+                    </div>
+                </div>
+                <div class="pro-price">
+                    <span class="price-det"><strong>50999</strong>万</span><span class="unit-price">212584元/m²</span>        
+                </div>
+            </li>
+        </ul>
+
+        <!-- 分页 -->
+        <div class="multi-page">
+            <i class="iPre">上一页</i>
+            <i class="curr">1</i>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <a href="#">6</a>
+            <a href="#">7</a>
+            <i class="aDotted">...</i>
+            <a href="#" class="aNxt">下一页 &gt;</a>
+        </div>
+
+	</div>
+
+	<div class="sale-right">
+    <!-- 广告位 -->
+		<div class="plate-recomm-mod">
+            <h3 class="hd">天河热推
+                <img class="guanggao" src="pic/ads-icon.png">
+            </h3>
+            <div class="plate-recomm-list">
+                <ul class="sync=list">
+                   <li class="item" data-url="#" data-soj="zlbk">
+                    <!-- ads-card-1 -->
+                       <div class="img-wrap">
+                        <a href="detail.html">
+                          <img src="pic/ads01.jpg" width="210" height="160">
+                        </a>
+                          <div class="mask-layer"></div>
+                          <p class="mask-text">
+                            <span class="l-text b-name">陈明</span>
+                            <span class="r-text phone">18922125557</span>
+                        </p>
+                      </div>
+                      <p class="text-theme">天河区/珠江新城东/富力盈盛广场</p>
+                      <p class="text-box">
+                        <span class="l-text b-price">700万</span>
+                        <span class="r-text b-other">3室2厅
+                            <em class="b-area">152.73m²</em>
+                        </span>
+                    </p>
+                    </li>
+
+                    <li class="item" data-url="#" data-soj="zlbk">
+                    <!-- ads-card-2 -->
+                       <div class="img-wrap">
+                        <a href="detail.html">
+                          <img src="pic/ads01.jpg" width="210" height="160">
+                        </a>
+                          <div class="mask-layer"></div>
+                          <p class="mask-text">
+                            <span class="l-text b-name">陈明</span>
+                            <span class="r-text phone">18922125557</span>
+                        </p>
+                      </div>
+                      <p class="text-theme">天河区/珠江新城东/富力盈盛广场</p>
+                      <p class="text-box">
+                        <span class="l-text b-price">700万</span>
+                        <span class="r-text b-other">3室2厅
+                            <em class="b-area">152.73m²</em>
+                        </span>
+                    </p>
+                    </li>
+
+                    <li class="item" data-url="#" data-soj="zlbk">
+                    <!-- ads-card-3 -->
+                       <div class="img-wrap">
+                        <a href="detail.html">
+                          <img src="pic/ads01.jpg" width="210" height="160">
+                        </a>
+                          <div class="mask-layer"></div>
+                          <p class="mask-text">
+                            <span class="l-text b-name">陈明</span>
+                            <span class="r-text phone">18922125557</span>
+                        </p>
+                      </div>
+                      <p class="text-theme">天河区/珠江新城东/富力盈盛广场</p>
+                      <p class="text-box">
+                        <span class="l-text b-price">700万</span>
+                        <span class="r-text b-other">3室2厅
+                            <em class="b-area">152.73m²</em>
+                        </span>
+                    </p>
+                    </li>
+
+                    <li class="item" data-url="#" data-soj="zlbk">
+                    <!-- ads-card-4 -->
+                       <div class="img-wrap">
+                        <a href="detail.html">
+                          <img src="pic/ads01.jpg" width="210" height="160">
+                        </a>
+                          <div class="mask-layer"></div>
+                          <p class="mask-text">
+                            <span class="l-text b-name">陈明</span>
+                            <span class="r-text phone">18922125557</span>
+                        </p>
+                      </div>
+                      <p class="text-theme">天河区/珠江新城东/富力盈盛广场</p>
+                      <p class="text-box">
+                        <span class="l-text b-price">700万</span>
+                        <span class="r-text b-other">3室2厅
+                            <em class="b-area">152.73m²</em>
+                        </span>
+                    </p>
+                    </li>
+
+                    <li class="item" data-url="#" data-soj="zlbk">
+                    <!-- ads-card-5 -->
+                       <div class="img-wrap">
+                        <a href="detail.html">
+                          <img src="pic/ads01.jpg" width="210" height="160">
+                        </a>
+                          <div class="mask-layer"></div>
+                          <p class="mask-text">
+                            <span class="l-text b-name">陈明</span>
+                            <span class="r-text phone">18922125557</span>
+                        </p>
+                      </div>
+                      <p class="text-theme">天河区/珠江新城东/富力盈盛广场</p>
+                      <p class="text-box">
+                        <span class="l-text b-price">700万</span>
+                        <span class="r-text b-other">3室2厅
+                            <em class="b-area">152.73m²</em>
+                        </span>
+                    </p>
+                    </li>
+
+                    <li class="item" data-url="#" data-soj="zlbk">
+                    <!-- ads-card-6 -->
+                       <div class="img-wrap">
+                        <a href="detail.html">
+                          <img src="pic/ads01.jpg" width="210" height="160">
+                        </a>
+                          <div class="mask-layer"></div>
+                          <p class="mask-text">
+                            <span class="l-text b-name">陈明</span>
+                            <span class="r-text phone">18922125557</span>
+                        </p>
+                      </div>
+                      <p class="text-theme">天河区/珠江新城东/富力盈盛广场</p>
+                      <p class="text-box">
+                        <span class="l-text b-price">700万</span>
+                        <span class="r-text b-other">3室2厅
+                            <em class="b-area">152.73m²</em>
+                        </span>
+                    </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+	</div>
+</div>
+</div>
+
+
+
+<!-- 页尾 -->
+<div class="footer-area">
+    <div class=" footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6 wow fadeInRight animated animated" style="visibility: visible; animation-name: fadeInRight;">
+                    <div class="single-footer">
+                        <h4>关于我们 </h4>
+                        <div class="footer-title-line"></div>
+                        <img src="pic/logo.png" alt="" class="wow pulse animated" data-wow-delay="1s" style="visibility: visible; animation-delay: 1s; animation-name: pulse;">
+                        <p>良心企业 良心企业 良心企业 良心企业 良心企业 良心企业 良心企业 良心企业 </p>
+                        <ul class="footer-adress">
+                            <li><i class="pe-7s-map-marker strong"> </i>广东省广州市xxx区</li>
+                            <li><i class="pe-7s-mail strong"> </i> email@yourcompany.com</li>
+                            <li><i class="pe-7s-call strong"> </i> +1 888 967 8888</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 wow fadeInRight animated animated" style="visibility: visible; animation-name: fadeInRight;">
+                    <div class="single-footer">
+                        <h4>快速导航 </h4>
+                        <div class="footer-title-line"></div>
+                        <ul class="footer-menu">
+                            <li><a href="#">新房发布</a>  </li> 
+                            <li><a href="area.html">地区选择--天河区</a>  </li> 
+                            <li><a href="#">联系我们 </a></li> 
+                            <li><a href="#">房屋搜索</a></li> 
+                            <li><a href="personal-infor.html">个人中心</a>  </li> 
+                            <li><a href="#">我的收藏 </a>  </li> 
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 wow fadeInRight animated animated" style="visibility: visible; animation-name: fadeInRight;">
+                    <div class="single-footer">
+                        <h4>最新发布</h4>
+                        <div class="footer-title-line"></div>
+                        <ul class="footer-blog">
+                            <li>
+                                <div class="col-md-4 col-sm-4 col-xs-4 blg-thumb p0">
+                                    <a href="detail.html">
+                                        <img src="pic/small-pic.jpg">
+                                    </a>
+                                    <span class="blg-date">12-12-2019</span>
+
+                                </div>
+                                <div class="col-md-8  col-sm-8 col-xs-8  blg-entry">
+                                    <h6> <a href="detail.html">番禺区笋盘 </a></h6> 
+                                    <p style="line-height: 17px; padding: 8px 2px;">棒棒哒的房子 棒棒哒</p>
+                                </div>
+                            </li> 
+
+                            <li>
+                                <div class="col-md-4 col-sm-4 col-xs-4 blg-thumb p0">
+                                    <a href="detail.html">
+                                        <img src="pic/small-pic.jpg">
+                                    </a>
+                                    <span class="blg-date">12-12-2019</span>
+
+                                </div>
+                                <div class="col-md-8  col-sm-8 col-xs-8  blg-entry">
+                                    <h6> <a href="detail.html">番禺区笋盘 </a></h6> 
+                                    <p style="line-height: 17px; padding: 8px 2px;">棒棒哒的房子 棒棒哒</p>
+                                </div>
+                            </li> 
+
+                            <li>
+                                <div class="col-md-4 col-sm-4 col-xs-4 blg-thumb p0">
+                                    <a href="detail.html">
+                                        <img src="pic/small-pic.jpg">
+                                    </a>
+                                    <span class="blg-date">12-12-2019</span>
+
+                                </div>
+                                <div class="col-md-8  col-sm-8 col-xs-8  blg-entry">
+                                    <h6> <a href="detail.html">番禺区笋盘 </a></h6> 
+                                    <p style="line-height: 17px; padding: 8px 2px;">棒棒哒的房子 棒棒哒</p>
+                                </div>
+                            </li> 
+
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 wow fadeInRight animated animated" style="visibility: visible; animation-name: fadeInRight;">
+                    <div class="single-footer news-letter">
+                        <h4>反馈＆分享</h4>
+                        <div class="footer-title-line"></div>
+                        <p>亲们，可以在此留下你们的意见＆建议~</p>
+
+                        <form>
+                            <div class="input-group">
+                                <input class="form-control" type="text" placeholder="E-mail ... ">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-primary subscribe" type="button">
+                                        <i class="pe-7s-paper-plane pe-2x"></i>
+                                    </button>
+                                </span>
+                            </div>
+                            <!-- /input-group -->
+                        </form> 
+
+                        <div class="social pull-right"> 
+                            <ul>
+                                <li>
+                                    <a class="wow fadeInUp animated animated" href="https://twitter.com/kimarotec" style="visibility: visible; animation-name: fadeInUp;">
+                                        <i class="fa fa-twitter"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="wow fadeInUp animated animated" href="https://www.facebook.com/kimarotec" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+                                        <i class="fa fa-facebook"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="wow fadeInUp animated animated" href="https://plus.google.com/kimarotec" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
+                                        <i class="fa fa-google-plus"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="wow fadeInUp animated animated" href="https://instagram.com/kimarotec" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
+                                        <i class="fa fa-instagram"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="wow fadeInUp animated animated" href="https://instagram.com/kimarotec" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp;">
+                                        <i class="fa fa-dribbble"></i>
+                                    </a>
+                                </li>
+                            </ul> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+</body>
+<!-- 这也是在菜单栏下拉重要的JS哦 -->
+<script type="text/javascript" src="js/bootsnav.js"></script> 
+<script src="./js/business/util.js"></script>
+<script>
+	$(document).ready(() => {
+		$('#nosearch').html(`
+			<h5 style="margin-bottom: 20px">请在上方输入相应的关键字查询你想要的房源信息</h5>
+		`)
+		getHouseArea() // 房子地区数据初始化
+	})
+</script>
+</html>

@@ -1,0 +1,29 @@
+.right-cont {
+  display: flex;
+  color: #fff;
+  padding: 10px;
+  justify-content: flex-start;
+  background-color: rgb(162, 216, 218);
+}
+
+.profile-title span {
+  font-weight: bold;
+}
+
+.profile-list {
+  list-style: none;
+}
+
+.profile-list li {
+  margin: 10px;
+}
+
+.profile-list li .img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.profile-list li span {
+  margin-right: 20px;
+}

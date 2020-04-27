@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>小麦网推荐页面</title>
+	<link rel="stylesheet" type="text/css" href="css/recommend.css">
+	<link rel="stylesheet" type="text/css" href="css/tabs-basic.css">   
+	<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script> 
+	<script type="text/javascript" src="js/card.js"></script> 
+<!-- boorstrap必需CSS -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/bootsnav.css">
+	<link type="text/css" href="css/pe-icon-7-stroke.css" rel="stylesheet">
+</head>
+<body>
+	<div class="top">  <!-- 图标  字体  小控件 -->
+		<div class="top_left">
+		<a href="index.html">
+			<img alt="logo" src="pic/logo.png">
+		</a>
+		</div>
+
+        <div class="qa-search-wrap-left">
+        <!-- 顶部搜索框 -->
+            <form class="comp-Searcher" id="qaNavSearcherForm" type="post" action="#">
+            <div class="ipt-wrap">
+                <input class="ipt" id="qaNavSearcherIpt" type="text" placeholder="在这儿输入您的问题">
+            </div>
+            <button class="right-icon" type="submit">
+                <i class="iconfont">搜&nbsp;&nbsp;索</i>
+            </button>
+            </form>
+        </div>
+
+		<div class="top_right">
+			<ul class="ul_son">
+				<li><a href="login.html">登&nbsp;&nbsp;&nbsp;&nbsp;录</a></li>
+				<li><a href=register.html>注&nbsp;&nbsp;&nbsp;&nbsp;册</a></li>
+			</ul>
+		</div>
+		<hr />	<!-- 分割线 -->
+	</div>
+
+	<div class="tabs-basic">
+ 	 <!-- 分页标签 选项卡控件 -->
+	  <ul>
+	      <li>
+	          <a class="tab-active" data-index="0" href="#">最新笋盘</a>
+	      </li>
+	      <li>
+	          <a data-index="1" href="#">至尊复式</a>
+	      </li>
+	      <li>
+	          <a data-index="2" href="#">舒适小区</a>
+	      </li>
+	      <li>
+	          <a data-index="3" href="#">学区别墅</a>
+	      </li>
+	      <li>
+	          <a data-index="4" href="#">颐养天年</a>
+	      </li>
+	  </ul>
+	  <!-- 内容页 -->
+	  <div class="tabs-content-placeholder">
+	 	<!-- 图片大小800*600以内为恰当 -->
+	      <div class="tab-content-active">
+	          <p>最新笋盘</p>
+	          <a href="#">
+	          	<img src="pic/1.jpg" alt="Banhoff">
+	          </a>
+	      </div>
+	 
+	      <div>
+	          <p>至尊复式</p>
+	          <a href="#">
+	          	<img src="pic/2.jpg" alt="Colosseum">
+	          </a>
+	      </div>
+	 
+	      <div>
+	          <p>舒适小区</p>
+	          <a href="#">
+	          	<img src="pic/3.jpg" alt="Sands of Life">
+	           </a>
+	      </div>
+	 
+	 	  <div>
+	          <p>学区别墅</p>
+	          <a href="#">
+	          	<img src="pic/4.jpg" alt="Sands of Life">
+	           </a>
+	      </div>
+
+	      <div>
+	          <p>颐养天年</p>
+	          <a href="#">
+	          	<img src="pic/5.jpg" alt="Sands of Life">
+	           </a>
+	      </div>
+	  </div>
+	</div>
+
+	<!-- 页尾 -->
+<div class="footer-area">
+    <div class=" footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6 wow fadeInRight animated animated" style="visibility: visible; animation-name: fadeInRight;">
+                    <div class="single-footer">
+                        <h4>关于我们 </h4>
+                        <div class="footer-title-line"></div>
+                        <a href="#"> 
+                        	<img src="pic/logo.png" alt="" class="wow pulse animated" data-wow-delay="1s" style="visibility: visible; animation-delay: 1s; animation-name: pulse;">
+                        </a>
+                        <p>良心企业 良心企业 良心企业 良心企业 良心企业 良心企业 良心企业 良心企业 </p>
+                        <ul class="footer-adress">
+                            <li><i class="pe-7s-map-marker strong"> </i>广东省广州市xxx区</li>
+                            <li><i class="pe-7s-mail strong"> </i> email@yourcompany.com</li>
+                            <li><i class="pe-7s-call strong"> </i> +1 888 967 8888</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 wow fadeInRight animated animated" style="visibility: visible; animation-name: fadeInRight;">
+                    <div class="single-footer">
+                        <h4>快速导航 </h4>
+                        <div class="footer-title-line"></div>
+                        <ul class="footer-menu">
+                            <li><a href="#">新房发布</a>  </li> 
+                            <li><a href="area.html">地区选择--天河区</a>  </li> 
+                            <li><a href="#">联系我们 </a></li> 
+                            <li><a href="#">房屋搜索</a></li> 
+                            <li><a href="#">个人中心</a>  </li> 
+                            <li><a href="#">我的收藏 </a>  </li> 
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 wow fadeInRight animated animated" style="visibility: visible; animation-name: fadeInRight;">
+                    <div class="single-footer">
+                        <h4>最新发布</h4>
+                        <div class="footer-title-line"></div>
+                        <ul class="footer-blog">
+                            <li>
+                                <div class="col-md-4 col-sm-4 col-xs-4 blg-thumb p0">
+                                    <a href="detail.html">
+                                        <img src="pic/small-pic.jpg">
+                                    </a>
+                                    <span class="blg-date">12-12-2019</span>
+
+                                </div>
+                                <div class="col-md-8  col-sm-8 col-xs-8  blg-entry">
+                                    <h6>
+                                     <a href="detail.html">番禺区笋盘 </a>
+                                 </h6> 
+                                    <p style="line-height: 17px; padding: 8px 2px;">棒棒哒的房子 棒棒哒</p>
+                                </div>
+                            </li> 
+
+                            <li>
+                                <div class="col-md-4 col-sm-4 col-xs-4 blg-thumb p0">
+                                    <a href="detail.html">
+                                        <img src="pic/small-pic.jpg">
+                                    </a>
+                                    <span class="blg-date">12-12-2019</span>
+
+                                </div>
+                                <div class="col-md-8  col-sm-8 col-xs-8  blg-entry">
+                                    <h6> 
+                                    	<a href="detail.html">番禺区笋盘 </a>
+                                    </h6> 
+                                    <p style="line-height: 17px; padding: 8px 2px;">棒棒哒的房子 棒棒哒</p>
+                                </div>
+                            </li> 
+
+                            <li>
+                                <div class="col-md-4 col-sm-4 col-xs-4 blg-thumb p0">
+                                    <a href="detail.html">
+                                        <img src="pic/small-pic.jpg">
+                                    </a>
+                                    <span class="blg-date">12-12-2019</span>
+
+                                </div>
+                                <div class="col-md-8  col-sm-8 col-xs-8  blg-entry">
+                                    <h6> <a href="detail.html">番禺区笋盘 </a></h6> 
+                                    <p style="line-height: 17px; padding: 8px 2px;">棒棒哒的房子 棒棒哒</p>
+                                </div>
+                            </li> 
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 wow fadeInRight animated animated" style="visibility: visible; animation-name: fadeInRight;">
+                    <div class="single-footer news-letter">
+                        <h4>反馈＆分享</h4>
+                        <div class="footer-title-line"></div>
+                        <p>亲们，可以在此留下你们的意见＆建议~</p>
+
+                        <form>
+                            <div class="input-group">
+                                <input class="form-control form-width" type="text" placeholder="E-mail ... ">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-primary subscribe" type="button">
+                                        <i class="pe-7s-paper-plane pe-2x"></i>
+                                    </button>
+                                </span>
+                            </div>
+                            <!-- /input-group -->
+                        </form> 
+
+                        <div class="social pull-right"> 
+                            <ul>
+                                <li>
+                                    <a class="wow fadeInUp animated animated" href="https://twitter.com/kimarotec" style="visibility: visible; animation-name: fadeInUp;">
+                                        <i class="fa fa-twitter"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="wow fadeInUp animated animated" href="https://www.facebook.com/kimarotec" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+                                        <i class="fa fa-facebook"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="wow fadeInUp animated animated" href="https://plus.google.com/kimarotec" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
+                                        <i class="fa fa-google-plus"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="wow fadeInUp animated animated" href="https://instagram.com/kimarotec" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
+                                        <i class="fa fa-instagram"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="wow fadeInUp animated animated" href="https://instagram.com/kimarotec" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp;">
+                                        <i class="fa fa-dribbble"></i>
+                                    </a>
+                                </li>
+                            </ul> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>	
+
+</body>
+</html>
